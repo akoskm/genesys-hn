@@ -27,9 +27,9 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm test -- --coverage`
+### `npm run test-coverage`
 
-Test coverage reports are generated in the `coverage` folder.\
+Test coverage reports are generated in the `coverage` folder and are also printed on the console.\
 Open ./coverage/lcov-report/index.html to view the coverage report.
 
 ### `npx playwright test`
