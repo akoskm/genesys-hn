@@ -10,7 +10,7 @@ test("has title", async ({ page }: { page: Page }) => {
 
 test("get started link", async ({ page: screen }: { page: Page }) => {
   // response to https://hacker-news.firebaseio.com/v0/showstories.json with [1, 2, 3]
-  await screen.route("**/showstories.json", (route) => {
+  await screen.route("**/newstories.json", (route) => {
     route.fulfill({ status: 200, body: "[1, 2, 3]" });
   });
 
