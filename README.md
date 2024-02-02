@@ -32,7 +32,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 Test coverage reports are generated in the `coverage` folder and are also printed on the console.\
 Open ./coverage/lcov-report/index.html to view the coverage report.
 
-### `npx playwright test`
+### `npx playwright test` (server must be running)
 
 Runs the end-to-end tests using Playwright.
 
