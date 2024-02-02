@@ -5,8 +5,7 @@ import StoriesList from "./components/StoriesList";
 function App() {
   const [itemIds, setItemIds] = useState<number[]>([]);
   useEffect(() => {
-    // TODO replace showstories with newstories
-    fetch("https://hacker-news.firebaseio.com/v0/showstories.json")
+    fetch("https://hacker-news.firebaseio.com/v0/newstories.json")
       .then((res) => res.json())
       .then((data) => {
         setItemIds(data);

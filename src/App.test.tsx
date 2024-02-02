@@ -6,7 +6,7 @@ describe("App", () => {
   it("renders learn react link", async () => {
     const response = [1, 2];
     fetchMock.get(
-      "https://hacker-news.firebaseio.com/v0/showstories.json",
+      "https://hacker-news.firebaseio.com/v0/newstories.json",
       response,
     );
     const title1 = "Building a Hacker News UI with React";
