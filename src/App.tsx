@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import ScrollToTop from "./components/ScrollToTop";
+import StoriesList from "./components/StoriesList";
 
 function App() {
+  const [itemIds, setItemIds] = useState<number[]>([]);
+  useEffect(() => {
+    // TODO replace showstories with newstories
+    fetch("https://hacker-news.firebaseio.com/v0/showstories.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setItemIds(data);
+      });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Latest Stories</h1>
+      <StoriesList itemIds={itemIds} />
+      <ScrollToTop />
     </div>
   );
 }

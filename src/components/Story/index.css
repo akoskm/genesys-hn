@@ -1,0 +1,39 @@
+.story-card {
+  text-align: left;
+  display: list-item;
+  list-style: decimal-leading-zero;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.story-card .title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: blue;
+}
+
+@media (prefers-color-scheme: dark) {
+  .story-card .title {
+    color: #227b00;
+  }
+}
+
+.story-card .details {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.story-card .details .score {
+  font-weight: bold;
+}
+
+.story-card .details .author {
+  font-style: italic;
+}
+
+.story-card .details .time {
+  font-style: italic;
+  color: #888;
+}
