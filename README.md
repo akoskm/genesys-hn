@@ -10,9 +10,7 @@ In the project directory run:
 npm i
 ```
 
-## Available Scripts
-
-In the project directory, you can run:
+# Available Scripts
 
 ### `npm start`
 
